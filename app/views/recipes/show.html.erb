@@ -41,3 +41,11 @@
   </div>
 </div>
 <h5><%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %></h5>
+<hr>
+<% if @recipe.reviews.any? %>
+  <p><strong>Reviews:</strong></p>
+  <%= render @recipe.reviews %>
+<% end %>
+
+<strong>Add a Review:</strong>
+<%= render "reviews/review_form" %>

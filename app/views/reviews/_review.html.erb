@@ -1,0 +1,14 @@
+<p>
+  <strong>Chef:</strong>
+  <%= review.chef.chefname %>
+</p>
+<p>
+  <strong>Review:</strong>
+  <p><%= review.title %></p>
+  <%= review.body %>
+</p>
+<p>
+  <%= link_to 'Destroy Review', [review.recipe, review],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>

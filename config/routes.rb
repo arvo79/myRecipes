@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     member do
       post 'like'
     end
+    resources :reviews
   end
 
   resources :chefs, except: [:new, :destroy]
